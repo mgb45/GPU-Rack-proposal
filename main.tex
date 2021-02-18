@@ -1,0 +1,68 @@
+\documentclass[12pt]{texMemo} % originally by Rob Oakes; adapted by Alice Chen
+
+\memoto{Malin Premaratne, Tom Drummond}
+\memofrom{Michael Burke}
+\memore{Request for GPU Server in support of Deep learning and robot learning at ECSE}
+\memodate{\today} % or \today
+% \memosection{203 (TA-First-Name TA-Last-Name)}
+
+\begin{document}
+\maketitle
+
+This memo provides a motivation for the purchase of an 8-GPU server to support deep learning research in ECSE. GPU computing has become an essential tool underpinning modern engineering. The rise of deep learning has impacted multiple aspects of engineering research, from signal processing to computer vision and robotics. Below, I provide 3 key reasons why procurement of a GPU server would benefit ECSE, and explain why provisioning of our own facilities is needed, before briefly specifying an appropriate server. 
+
+\section{Why can't ECSE use existing university computing provisions?}
+
+Unfortunately, existing (free) cloud services provided by the university (eg. Massive/ MonARCH) are entirely unsuited for the requirements of real-time robotics and computer vision research, as they are targeted at high-performance computing applications and as a result configured for batch, or job-level processing. Moreover, jobs are time and resource-limited, and fair use policies punish intensive users. 
+
+In robotics and real-time computer vision research, decisions need to be made online and as and when data is available, which requires that models can be loaded in memory on an ad-hoc basis, and called upon on demand. In deep reinforcement learning or adaptive learning settings, model training needs to be online, with models adapted as new data is made available, and commands sent to robots or hardware in the loop. This class of research cannot be performed using priority scheduled processing. 
+
+While paid cloud services are a feasible alternative to Massive/ MonARCH, this requires long term funding that can be difficult to secure in research settings, as grant funding is typically short term and project-based.
+
+\section{ECSE already has X GPUs, why can't you use those?}
+
+The computational requirements of research in deep learning continue to grow\footnote{eg. the Billion parameter language models of OpenAI's GPT3.}. In computer vision, artificial intelligence and robotics research we are faced with growing competitive threats from FAANG\footnote{Facebook, Apple, Amazon, Netflix and Google - 5 of whom now have robotics divisions alongside their machine learning, computer vision and natural language processing research efforts.} companies with significantly greater levels of funding and computational resources. While universities continue to pivot to interesting research questions in parallel to the research efforts of these large companies, but at smaller scale, it is unquestionable that state-of-the-art models still require substantial storage and levels of compute, and requirements for hyper-parameter search currently mean that our existing provision is already over-used and in high demand.
+
+In the Monash robotics labs, we currently rely on 4 laptops with small GPUs for interfacing with robots, and a growing collection of desktop workstations procured for individual staff members and students. This not only limits our ability to test and train larger models, but is unsustainable going forward. Monash robotics currently has no existing provision for an external server in the robot control loop. A dedicated GPU server will address this gap.
+
+\section{How will ECSE benefit?}
+
+Deep learning research is currently conducted by numerous students, research and academic staff within ECSE, including:
+\begin{itemize}
+    \item Tom Drummond
+    \item Mehrtash Harandi
+    \item Michael Burke
+    \item Faezeh Marzbanrad
+    \item Dana Kulic
+    \item Wesley Chan
+    \item Arkansel Cosgun
+\end{itemize}
+all of whom have expressed a need for infrastructure to help build local ECSE capacity in AI research. 
+
+\section{How I would benefit?}
+
+On a more personal level, as an early career researcher that is new to Monash, my work focuses on the interface between machine learning and control, and the importance of inductive biases in deep learning for robotics. The last 13 publications I have authored or co-authored involved a GPU in a robot control loop, and so local infrastructure for this type of work is particularly important for me to continue my current line of research. This infrastructure will help me as I start to grow a research team, and ensure that I have ready access to the equipment needed to support my research agenda going forward. This provision will also strengthen future research proposals for external grant funding, helping to motivate why Monash ECSE is best equipped to support research in my field.
+
+\section{Server specifications}
+
+I would like to purchase an Asus 4U ESC8000 G4 GPU Server - Dual Xeon + 256GB Ram + 8 x RTX 3090 GPUs, at an estimated cost of \$40 000 - \$50 000.
+
+\begin{tabular}{l|l}
+\textbf{Component} & \textbf{Estimated cost}\\
+\hline
+\hline
+RACK BAREBONE ESC8000 G4 Server & \$ 12,000\\
+CPU	 1 x Intel® Xeon® Scalable Silver Processor 4112 (2.60 Ghz 85W) & \$ 800\\
+MEMORY 4 x Samsung 64GB DDR4 2666 ECC LRDIMM Memory
+& \$ 2,300\\
+HDD/SSD Intel/Samsung/Micron 2 x Samsung 860 Pro 2.5" SATA 6Gb/s 1TB SSD &
+\$ 650\\
+GPU\/Coprocessor	8 x GIGABYTE GeForce RTX 3090 TURBO 24G Video Card & \$ 25,000\\
+\hline
+Total & \$ 40 750\\
+\hline
+\end{tabular}
+
+\newpage
+\printbibliography
+\end{document}
